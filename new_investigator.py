@@ -11,6 +11,12 @@ s = r.Session()
 
 s.headers["authorization"] = input("Discord token --> ")
 
+prox = input("Proxy (blank for none) --> ")
+if prox != "":
+    s.proxies = {
+        "http":prox
+    }
+
 threads = int(input("Threads --> "))
 chat_id = input("Chat id --> ")
 
